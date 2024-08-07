@@ -1,0 +1,24 @@
+form input,
+form select {
+    height: 24px;
+    width: 240px;
+    box-sizing: border-box;
+    margin-bottom: 12px;;
+}
+
+form input[type=button]{
+    margin-top: 12px;
+}
+
+form label {
+    font-size: 12px;
+}
+
+form.add-more {
+    background-color: rgb(241, 241, 241);
+    padding: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

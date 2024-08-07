@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Instrumento</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let member of members" app-band-member [member]="member">
+        </tr>
+    </tbody>
+
+</table>
+<app-band-member-form [setNewMember]="setNewMember"/>
