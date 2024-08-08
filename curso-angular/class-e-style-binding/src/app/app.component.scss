@@ -1,0 +1,22 @@
+main{
+    margin: 64px auto;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alert-container{
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.alert{
+    width: fit-content;
+    padding: 12px 32px;
+}

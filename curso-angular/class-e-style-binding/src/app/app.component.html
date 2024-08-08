@@ -1,0 +1,27 @@
+<main>
+
+  <section>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma Classe
+      <select #classe (change)="0">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Alerta</option>
+        <option value="alert-danger">Erro</option>
+        <option value="alert-primary">Primary</option>
+        <option value="alert-secondary">Secondary</option>
+        <option value="alert-light">Claro</option>
+        <option value="alert-dark">Escuro</option>
+      </select>
+    </div>
+
+    <div class="alert-container">
+      <div class="alert {{classe.value}}" role="alert">
+        Alerta
+      </div>
+      <div class="alert alert-danger" role="alert" [style.display]="classe.value === 'alert-danger' ? 'block' : 'none'">Esse Alerta só aparece em caso de erro.</div>
+    </div>
+  </section>
+
+</main>
