@@ -1,13 +1,13 @@
 <form class="add-more">
     <p>Adicionar membros</p>
     <label for="firstName">Nome:</label>
-    <input type="text" id="firstName" name="firstName" [formControl]="firstName" >
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="newMember.firstName" >
 
     <label for="lastName">Sobrenome:</label>
-    <input type="text" id="lastName" name="lastName" [formControl]="lastName" >
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="newMember.lastName" >
 
     <label for="instrument">Instrumento</label>
-    <select name="instrument" id="instrument" [formControl]="instrument">
+    <select name="instrument" id="instrument" [(ngModel)]="newMember.instrument">
         <option *ngFor="let instrument of instrumentsOptions" [value]="instrument">{{ instrument }}</option>
     </select>
     <input type="button" value="Adicionar" (click)="submitNewMemberForm()">

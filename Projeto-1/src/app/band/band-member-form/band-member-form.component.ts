@@ -8,21 +8,20 @@ import instrumentsOptions from '../../../mocks/instruments.json';
   styleUrl: './band-member-form.component.scss'
 })
 export class BandMemberFormComponent {
-  firstName = new FormControl();
-  lastName = new FormControl();
-  instrument = new FormControl();
+  newMember= {
+    firstName: '',
+    lastName: '',
+    instrument: ''
+  } satisfies Member
   instrumentsOptions = instrumentsOptions;
   @Input() setNewMember!: Function;
 
   submitNewMemberForm(){
-    const newMember = {
-      firstName: this.firstName.value,
-      lastName: this.lastName.value,
-      instrument: this.instrument.value
-    } satisfies Member;
-    this.setNewMember(newMember);
-    this.firstName.setValue('');
-    this.lastName.setValue('');
-    this.instrument.setValue('');
+    this.setNewMember(this.newMember);
+    this.newMember =  {
+      firstName: '',
+      lastName: '',
+      instrument: ''
+    }
   }
 }
