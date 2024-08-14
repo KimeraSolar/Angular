@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test-react": "vitest run",
+    "test-watch": "vitest",
+    "test:ui": "vitest --ui"
   },
   "private": true,
   "dependencies": {
@@ -30,13 +33,19 @@
     "@angular-devkit/build-angular": "^17.3.8",
     "@angular/cli": "^17.3.8",
     "@angular/compiler-cli": "^17.3.0",
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
+    "jsdom": "^24.1.1",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
+    "typescript": "~5.4.2",
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.2",
+    "vitest": "^2.0.5"
   }
 }
