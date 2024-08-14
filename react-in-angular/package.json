@@ -9,7 +9,9 @@
     "test": "ng test",
     "test-react": "vitest run",
     "test-watch": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "private": true,
   "dependencies": {
@@ -21,11 +23,15 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rxjs": "~7.8.0",
+    "storybook": "^8.2.9",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
