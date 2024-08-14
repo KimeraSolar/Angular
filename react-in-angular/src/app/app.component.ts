@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgReactDirective } from './components/react/ng-react.directive';
-import CountButton from './components/CountButton';
+
 
 @Component({
   selector: 'app-root',
@@ -14,17 +14,12 @@ export class AppComponent {
 
   public counter = 21;
 
-  public handleClick(){
+  public handleClick = () => { // arrow function does the .bind(this) by itself
     this.counter++;
   }
 
   ReactButton = () => import('./components/CountButton').then((m) => m.default);
 
   title = 'react-in-angular';
-
-  constructor(){
-    this.handleClick = this.handleClick.bind(this);
-  }
-
 
 }
